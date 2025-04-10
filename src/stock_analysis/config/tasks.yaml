@@ -1,0 +1,59 @@
+research_market_trends_task:
+  description: >
+    Conduct thorough research on {company_name} ({ticker_symbol}) current market position.
+    Focus on recent news, industry trends, competitive landscape, product launches,
+    regulatory changes, and overall market sentiment. Look for information that could
+    impact stock performance in the near to medium term. Consider both technical and
+    fundamental factors that might influence investor decisions.
+  expected_output: >
+    A comprehensive overview of market factors affecting {ticker_symbol}, including
+    key news events, industry trends, competitive positioning, and market sentiment
+    analysis. Include notable analyst opinions and price targets if available.
+
+analyze_stock_data_task:
+  description: >
+    Analyze {ticker_symbol}'s stock price performance data for the past 12 months.
+    Identify key patterns, trend lines, support and resistance levels, and technical
+    indicators (such as moving averages, RSI, MACD). Compare current valuation metrics
+    (P/E ratio, PEG, etc.) against historical averages and industry peers. Identify
+    unusual trading patterns or volume spikes.
+  expected_output: >
+    A detailed technical analysis of {ticker_symbol}'s stock performance, including
+    key technical indicators, price patterns, volume analysis, valuation comparisons,
+    and identification of potential bullish or bearish signals. Include specific price
+    points that may serve as important technical levels.
+
+get_quarterly_report_task:
+  description: >
+    Retrieve and analyze {company_name}'s latest quarterly financial report for {analysis_period}.
+    Extract key financial data including revenue, earnings per share, gross margin, operating
+    margin, net income, cash flow, debt levels, and capital expenditures. Compare results to
+    previous quarters and analyst expectations. Pay special attention to forward guidance,
+    management comments, and any changes in business strategy or operations.
+  expected_output: >
+    A comprehensive breakdown of {company_name}'s financial performance for {analysis_period},
+    highlighting key metrics, quarter-over-quarter and year-over-year comparisons, performance
+    against expectations, and notable statements from management. Include assessment of financial
+    health and any red or green flags identified in the report.
+
+summarize_analysis_task:
+  description: >
+    Using all the gathered information about {company_name} ({ticker_symbol}), synthesize a
+    comprehensive stock analysis report. Integrate market research, technical analysis, and
+    financial report findings to create a holistic view of the stock's current position and
+    future outlook. Develop specific investment recommendations (buy, sell, hold) with supporting
+    rationale, price targets, timeframes, and risk assessments.
+
+    REMOVE ANY COMMENT OR THINGS LIKE "my best complete final answer to the task"
+
+  expected_output: >
+    A StockAnalysisResult object containing:
+    1. Executive summary of {ticker_symbol}'s current position
+    2. Market and industry context analysis
+    3. Technical analysis findings
+    4. Financial performance assessment
+    5. SWOT analysis (Strengths, Weaknesses, Opportunities, Threats)
+    6. Clear investment recommendation with rationale
+    7. Risk factors and considerations
+    8. Price targets (short-term and long-term) with supporting logic
+    Must be Markdown-formatted for easy reading and sharing with investment teams.
